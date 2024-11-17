@@ -37,17 +37,49 @@ export default function App() {
     {
       id:5,
       name:"Duam"
+    },
+    {
+      id:5,
+      name:"Duam"
+    },
+    {
+      id:5,
+      name:"Duam"
+    },
+    {
+      id:5,
+      name:"Duam"
+    },
+    {
+      id:5,
+      name:"Duam"
+    },
+    {
+      id:5,
+      name:"Duam"
+    },
+    {
+      id:5,
+      name:"Duam"
     }
   ]
 
   return (
     <View>
-      <Text style={{fontSize:19,fontWeight:'bold'}} >All Users List</Text>
-      <FlatList
-        data={users}
-        renderItem={({item}) =><Text style={{fontSize:20}}>{item.name}</Text>}
-        keyExtractor={item=>item.id}
-      />
+      <Text style={{fontSize:19,fontWeight:'bold',textAlign:'center',backgroundColor:'blue',color:'#fff'}} >All Users List</Text>
+      <ScrollView>
+      {
+        users.map((item,index) => <Text style={customStyle.listItm}>{`${index+1}. ${item.name}`}</Text>)
+      }
+      </ScrollView>
     </View>
   );
+}
+
+const customStyle ={
+  listItm:{
+    fontWeight:'bold',
+    fontSize:23,
+    marginBottom:40
+  }
 }
