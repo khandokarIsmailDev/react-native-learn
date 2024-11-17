@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import EXstyles from './style'
 
 import {
   Button,
@@ -29,26 +30,11 @@ export default function App() {
       {/* <Button title='name' onPress={()=>fruit('ismail')} /> */}
       <Text>{name}</Text>
       <Button title='click' onPress={()=>setName('dilam to change kore')} />
-      <Text style={custStyles.textBox} >Custom Style Use</Text>
-      <Text style={custStyles.textBox} >Custom Style Use</Text>
-      <Text style={custStyles.textBox} >Custom Style Use</Text>
+      <Text style={EXstyles.textBox} >Custom Style Use</Text>
+      <Text style={EXstyles.textBox} >Custom Style Use</Text>
+      <Text style={EXstyles.textBox} >Custom Style Use</Text>
     </>
   );
 }
 
-const custStyles = StyleSheet.create({
-  textBox:{
-    color:'blue',
-    fontSize:40,
-    backgroundColor:'pink',
-    marginBottom:10,
-    padding:10,
-    borderRadius:10,
-    height:100,
-    textAlignVertical:'center',
-    textAlign:'center',
-    borderColor:'red',
-    borderWidth:2
-  }
-})
 
