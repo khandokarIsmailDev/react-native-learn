@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
+  Button,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -11,11 +12,24 @@ import {
 } from 'react-native';
 
 export default function App() {
+
+  const[name,setName] = useState('kalam')
+
+  const fruit = (name) =>{
+    console.warn("Function Called",name)
+  }
+
+  const result = 'jiji'
+
   return (
-    <View>
-      <Text style={{fontSize: 30}}>Hello Ismail</Text>
-      <Text style={{fontSize:50}}>LIke</Text>
-    </View>
+    <>
+      <Text style={{fontSize: 30,color:'red',backgroundColor:'green'}}>Hello Ismail</Text>
+      <Text style={{fontSize:50}}>LIkes</Text>
+      <Button title='hello' onPress={fruit} color={'red'} />
+      {/* <Button title='name' onPress={()=>fruit('ismail')} /> */}
+      <Text>{name}</Text>
+      <Button title='click' onPress={()=>setName('dilam to change kore')} />
+    </>
   );
 }
 
