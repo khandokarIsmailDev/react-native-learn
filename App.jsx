@@ -16,18 +16,66 @@ import {
 
 export default function App() {
 
+  
+  const users =[
+    {
+      id:1,
+      name:"Sam"
+    },
+    {
+      id:2,
+      name:"Kam"
+    },
+    {
+      id:3,
+      name:"Pem"
+    },
+    {
+      id:4,
+      name:"Cham"
+    },
+    {
+      id:5,
+      name:"Duam"
+    },
+    {
+      id:5,
+      name:"Duam"
+    },
+    {
+      id:5,
+      name:"Duam"
+    },
+    {
+      id:5,
+      name:"Duam"
+    },
+    {
+      id:5,
+      name:"Duam"
+    },
+    {
+      id:5,
+      name:"Duam"
+    },
+    {
+      id:5,
+      name:"Duam"
+    }
+  ]
+
+
  
+
 
   return (
     <View>
-      <Text style={{fontSize:19,fontWeight:'bold',textAlign:'center',backgroundColor:'blue',color:'#fff'}} >Using Grid List</Text>
+      <Text style={{fontSize:19,fontWeight:'bold',textAlign:'center',backgroundColor:'blue',color:'#fff'}} >Using Grid List In Map</Text>
       <View style={{flex:1,flexDirection:'row',flexWrap:'wrap'}}>
-        <Text style={customStyles.item}>Sam</Text>
-        <Text style={customStyles.item}>Sam</Text>
-        <Text style={customStyles.item}>Sam</Text>
-        <Text style={customStyles.item}>Sam</Text>
-        <Text style={customStyles.item}>Sam</Text>
-        <Text style={customStyles.item}>Sam</Text>
+        {
+          users.map((item) => <Text style={customStyles.item}>{item.name}</Text>)
+        }
+        
         
       </View>
     </View>
