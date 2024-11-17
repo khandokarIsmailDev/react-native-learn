@@ -78,15 +78,21 @@ export default function App() {
         <FlatList
           data={users}
           renderItem={({item}) => (
-            <View style={customStyles.box}>
-              <Text style={customStyles.item}>{item.id}</Text>
-              <Text style={customStyles.item}>{item.name}</Text>
-            </View>
+            <UserAll item={item}/>
           )}
         />
       </View>
     </View>
   );
+}
+
+const UserAll =({item}) =>{
+  return (
+    <View style={customStyles.box}>
+              <Text style={customStyles.item}>{item.id}</Text>
+              <Text style={customStyles.item}>{item.name}</Text>
+            </View>
+  )
 }
 
 const customStyles = StyleSheet.create({
